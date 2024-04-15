@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<mapper namespace="com.wxj.SimpleMybatis.UserMapper">
+    <select id="getUser" resultType="com.wxj.SimpleMybatis.User">
+        select * from user where name=#{name}
+    </select>
+
+
+    <select id="queryById" resultType="com.wxj.SimpleMybatis.User">
+        select * from user where id=#{id}
+    </select>
+</mapper>

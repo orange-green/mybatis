@@ -1,6 +1,9 @@
 package com.wxj.SimpleMybatis;
 
 import com.wxj.SimpleMybatis.Factory.MapperProxyFactory;
+import com.wxj.SimpleMybatis.Xml.XmlUtil;
+import com.wxj.SimpleMybatis.model.Database;
+import org.w3c.dom.Document;
 
 import java.util.List;
 
@@ -15,11 +18,19 @@ import java.util.List;
 
 public class MyApplication {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception{
 
-    UserMapper userMapper = MapperProxyFactory.getMapper(UserMapper.class);
-    List<User> list = userMapper.getUser("wxj");
+//    UserMapper userMapper = MapperProxyFactory.getMapper(UserMapper.class);
+//    List<User> list = userMapper.getUser("wxj");
+//
+//    System.out.println(list);
+//
+//    User user = userMapper.queryById(1L);
+//    System.out.println(user);
 
-    System.out.println(list);
+
+    Document document = XmlUtil.XmlReader("resource/xml/mybatis-config.xml");
+    Database database = XmlUtil.parseXmlDataBaseProperty(document);
+    List<String> strings = XmlUtil.parseXmlMapperURL(document);
   }
 }

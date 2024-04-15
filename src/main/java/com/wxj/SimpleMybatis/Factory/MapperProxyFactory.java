@@ -26,6 +26,7 @@ public class MapperProxyFactory {
 
         typeHandlerMap.put(String.class, new StringTypeHandler());
         typeHandlerMap.put(Integer.class,new IntegerTypeHandler());
+        typeHandlerMap.put(Long.class, new LongTypeHandler());
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
