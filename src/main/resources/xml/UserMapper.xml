@@ -5,8 +5,10 @@
         select * from user where name=#{name}
     </select>
 
-
     <select id="queryById" resultType="com.wxj.SimpleMybatis.User">
         select * from user where id=#{id}
     </select>
+    <update id="updateNameById" resultType="null">
+        update user set name=#{name} where id=#{id}
+    </update>
 </mapper>

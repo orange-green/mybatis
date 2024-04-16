@@ -29,8 +29,8 @@ public class MyApplication {
 //    System.out.println(user);
 
 
-    Document document = XmlUtil.XmlReader("resource/xml/mybatis-config.xml");
+    Document document = XmlUtil.XmlReader("/xml/mybatis-config.xml");
     Database database = XmlUtil.parseXmlDataBaseProperty(document);
-    List<String> strings = XmlUtil.parseXmlMapperURL(document);
+    List<String> strings = XmlUtil.parseXmlMappers(document);
   }
 }

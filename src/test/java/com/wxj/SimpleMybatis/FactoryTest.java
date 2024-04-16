@@ -28,7 +28,7 @@ public class FactoryTest {
     public void test2() throws Exception {
         Document document = XmlUtil.XmlReader("resource/xml/mybatis-config.xml");
         Database database = XmlUtil.parseXmlDataBaseProperty(document);
-        List<String> strings = XmlUtil.parseXmlMapperURL(document);
+        List<String> strings = XmlUtil.parseXmlMappers(document);
     }
 
 }

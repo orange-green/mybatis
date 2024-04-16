@@ -8,6 +8,6 @@
         <property name="password" value="123456"/>
     </dataSource>
     <mappers>
-        <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+        <mapper resource="/xml/UserMapper.xml"/>
     </mappers>
 </configuration>
